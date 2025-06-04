@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+<!--
+
+┌─┐┌─┐┬ ┬┌─┐┬ ┬┌─┐┬ ┬┌─┐┬  ┌─┐
+├─┘└─┐└┬┘│  ├─┤│ │││││ ││  ├┤ 
+┴  └─┘ ┴ └─┘┴ ┴└─┘└┴┘└─┘┴─┘└  
+(AKA Alexis)        
+Vous présente ses excuses pour son code spaghetti, mais qui marche :0 (le responsive pour bientôt)
+
+
+
+-PS: La console
+-->
 
 <head>
     <meta charset="UTF-8">
@@ -32,7 +44,7 @@
         <div class="image-grid">
             <div class="image-item">
                 <a href="https://psychowolf960.itch.io/the-legendary-knight" download>
-                    <img src="Images/Jeux/PAINter.png" alt="PAINTer">
+                    <img src="Images/Jeux/PAINTer.png" alt="PAINTer">
                 </a>
                 <div class="image-caption">PAINTer</div>
             </div>
@@ -43,7 +55,7 @@
                 <div class="image-caption">FPills</div>
             </div>
             <div class="image-item">
-                <a href="Images/Jeux/Puff.gif" download>
+                <a href="https://psychowolf960.itch.io/puff" download>
                     <img src="Images/Jeux/Puff.gif" alt="Puff">
                 </a>
                 <div class="image-caption">Puff</div>
@@ -55,13 +67,13 @@
                 <div class="image-caption">Bouncy</div>
             </div>
             <div class="image-item">
-                <a href="Telechargements/" download>
+                <a href="https://psychowolf960.itch.io/unispin" download>
                     <img src="Images/Jeux/Oneway.png" alt="OneWay">
                 </a>
                 <div class="image-caption">OneWay</div>
             </div>
             <div class="image-item">
-                <a href="Images/Jeux/Unispin.png" download>
+                <a href="https://psychowolf960.itch.io/unispin" download>
                     <img src="Images/Jeux/Unispin.png" alt="Unispin">
                 </a>
                 <div class="image-caption">Unispin</div>
@@ -71,6 +83,12 @@
                     <img src="Images/Jeux/Knight.png" alt="Knight">
                 </a>
                 <div class="image-caption">The Legendary Knight</div>
+            </div>
+            <div class="image-item">
+                <a href="https://lauiss.itch.io/dawnfire" download>
+                    <img src="Images/Jeux/DawnFire.png" alt="DawnFire">
+                </a>
+                <div class="image-caption">DawnFire</div>
             </div>
         </div>
 
@@ -82,10 +100,10 @@
         <div class="art-carousel">
             <div class="carousel-container" id="carousel-container">
                 <div class="carousel-slide">
-                                    <a href="https://arkensoi.com/" download>
-                    <img src="Images/Sites/Arkensoi.jpg" alt="Arkensoi">
-                </a>
-                    
+                    <a href="https://arkensoi.com/" download>
+                        <img src="Images/Sites/Arkensoi.jpg" alt="Arkensoi">
+                    </a>
+
                     <div class="image-caption">Arkensoi</div>
                 </div>
                 <div class="carousel-slide">
@@ -93,9 +111,9 @@
                     <div class="image-caption">Coda</div>
                 </div>
                 <div class="carousel-slide">
-                                                        <a href="https://tagz-map.netlify.app/" download>
-                    <img src="Images/Sites/Strag.jpg" alt="Strag">
-                </a>
+                    <a href="https://tagz-map.netlify.app/" download>
+                        <img src="Images/Sites/Strag.jpg" alt="Strag">
+                    </a>
                     <div class="image-caption">Strag</div>
                 </div>
             </div>
@@ -204,6 +222,10 @@
     </footer>
 
     <script>
+        console.log("%c En investigation? 🕵️‍♂️", "color: #ff69b4; font-size: 20px; font-weight: bold;");
+        console.log("%cPrenez une petite pause!", "color: gold; font-weight: bold;");
+        console.log("https://psychowolf960.github.io/secret.html");
+
         document.querySelectorAll('.gallery-item').forEach(item => {
             item.addEventListener('click', () => {
                 const modal = document.getElementById('modal');

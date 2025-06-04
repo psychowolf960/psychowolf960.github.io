@@ -203,6 +203,15 @@ video {
     grid-row: 3;
 }
 
+.image-item:nth-child(8) {
+    /* DawnFire */
+    animation-duration: 3.2s;
+    animation-delay: 0s;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -276,7 +285,7 @@ video {
     min-width: 100%;
     position: relative;
     background: #111;
-    
+
 }
 
 .carousel-slide .image-caption {
@@ -439,7 +448,8 @@ video {
 }
 
 .timeline-content h3 {
-    font-family: 'Courier New', Courier, monospace;;
+    font-family: 'Courier New', Courier, monospace;
+    ;
     font-size: 2rem;
     color: #fff;
     margin-bottom: 10px;
