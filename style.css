@@ -7,7 +7,7 @@
 body {
     background: #000;
     color: #fff;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     line-height: 1.2;
     overflow-x: hidden;
 }
@@ -26,7 +26,7 @@ body,
 html {
     height: 100%;
     background: black;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     color: white;
     overflow-x: hidden;
 }
@@ -439,7 +439,7 @@ video {
 }
 
 .timeline-content h3 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Courier New', Courier, monospace;;
     font-size: 2rem;
     color: #fff;
     margin-bottom: 10px;
@@ -639,4 +639,49 @@ canvas {
     font-weight: bold;
     cursor: pointer;
     z-index: 101;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+    border-top: 4px solid #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    border: 2px dashed #fff;
+    padding: 1rem;
+    background-color: #111;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content a {
+    color: #2f00ff;
+    text-decoration: none;
+    background: #fff;
+    padding: 2px 4px;
+    font-weight: bold;
+    display: inline-block;
+    border: 2px solid #e6e6e6;
+    transition: background 0.2s, color 0.2s;
+}
+
+.footer-content a:hover {
+    background: #a591ff;
+    color: #000;
+    border: 2px solid #fff;
 }
