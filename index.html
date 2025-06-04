@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Alexis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="landing">
+        <canvas></canvas>
+        <div class="content">
+            <video width="1920" height="1080" loop autoplay muted>
+                <source src="Videos/Titre.mp4" type="video/mp4">
+            </video>
+            <nav class="nav-buttons">
+                <a href="#jeux" class="neon-btn">Jeux</a>
+                <a href="#sites" class="neon-btn">Sites Web</a>
+                <a href="#art" class="neon-btn">Art</a>
+                <a href="#timeline" class="neon-btn">Par Anno</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section" id="jeux">
+        <img src="Images/Jeux.gif" alt="JEUX VIDEOS" class="section-title">
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="Images/Jeux/PAINter.png" alt="PAINTer">
+                <div class="image-caption">PAINTer</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/Jeux/FPills.gif" alt="FPills">
+                <div class="image-caption">FPills</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/Jeux/Puff.gif" alt="Puff">
+                <div class="image-caption">Puff</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/Jeux/Better.gif" alt="Better">
+                <div class="image-caption">Bouncy</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/Jeux/Oneway.png" alt="OneWay">
+                <div class="image-caption">OneWay</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/Jeux/Unispin.png" alt="Unispin">
+                <div class="image-caption">Unispin</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/Jeux/Knight.png" alt="Knight">
+                <div class="image-caption">The Legendary Knight</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section sites" id="sites">
+        <img src="Images/Sites.gif" alt="SITES" class="section-title">
+        <div class="art-carousel">
+            <div class="carousel-container" id="carousel-container">
+                <div class="carousel-slide">
+                    <img src="Images/Sites/Arkensoi.jpg" alt="Arkensoi">
+                    <div class="image-caption">Arkensoi</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="Images/Sites/Coda.jpg" alt="Coda">
+                    <div class="image-caption">Coda</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="Images/Sites/Strag.jpg" alt="Strag">
+                    <div class="image-caption">Strag</div>
+                </div>
+            </div>
+            <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">‹</button>
+            <button class="carousel-nav carousel-next" onclick="changeSlide(1)">›</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+    </section>
+
+    <section class="section art" id="art">
+        <img src="Images/Art.gif" alt="ART" class="section-title">
+        <div class="gallery">
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/1.png" alt="Image 1">
+            </div>
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/2.png" alt="Image 2">
+            </div>
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/3.png" alt="Image 3">
+            </div>
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/4.png" alt="Image 4">
+            </div>
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/5.png" alt="Image 5">
+            </div>
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/6.png" alt="Image 6">
+            </div>
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/7.png" alt="Image 7">
+            </div>
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/8.png" alt="Image 8">
+            </div>
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/9.png" alt="Image 9">
+            </div>
+            <div class="gallery-item" data-type="image">
+                <img src="Images/Art/10.png" alt="Image 10">
+            </div>
+            <div class="gallery-item" data-type="video">
+                <video poster="Images/Art/Cowboy.png" muted>
+                    <source src="Images/Art/Cowboy.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="gallery-item" data-type="video">
+                <video poster="Images/Art/Red.png" muted>
+                    <source src="Images/Art/Red.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="gallery-item" data-type="video">
+                <video poster="Images/Art/Birdie.png" muted>
+                    <source src="Images/Art/birdie.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">×</span>
+            <div class="modal-content" id="modal-content"></div>
+        </div>
+    </section>
+
+    <section class="section timeline" id="timeline">
+        <h2 class="section-title" data-text="PARCOURS">PARCOURS</h2>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="timeline-item" data-year="2018-2019">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>École St Bernard</h3>
+                    <p>Collège privé hors contrat</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2019-2021">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Collège Michelet</h3>
+                    <p>Collège privé hors contrat</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2021-2024">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Lycée Saint François de Sales</h3>
+                    <p>Formation générale</p>
+                </div>
+            </div>
+            <div class="timeline-item current" data-year="2024-2026">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>MMI IUT de Troyes</h3>
+                    <p>Métiers du Multimédia et de l'Internet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Alexis Ventre &copy; 2025</p>
+            <p><a href="mailto:alexisventre974@gmail.com">alexisventre974@gmail.com</a></p>
+            <p><a href="tel:+33615152780">06 15 15 27 80</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const modal = document.getElementById('modal');
+                const modalContent = document.getElementById('modal-content');
+                const type = item.dataset.type;
+
+                modalContent.innerHTML = '';
+
+                if (type === 'image') {
+                    const img = item.querySelector('img');
+                    const newImg = document.createElement('img');
+                    newImg.src = img.src;
+                    newImg.alt = img.alt;
+                    modalContent.appendChild(newImg);
+                } else if (type === 'video') {
+                    const videoSrc = item.querySelector('source').src;
+                    const newVideo = document.createElement('video');
+                    newVideo.controls = true;
+                    newVideo.autoplay = true;
+                    newVideo.src = videoSrc;
+                    newVideo.type = 'video/mp4';
+                    modalContent.appendChild(newVideo);
+                }
+
+                modal.style.display = 'flex';
+            });
+        });
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modal-content');
+            modal.style.display = 'none';
+            modalContent.innerHTML = '';
+            const videos = modalContent.querySelectorAll('video');
+            videos.forEach(video => video.pause());
+        }
+
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
