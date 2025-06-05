@@ -1,3 +1,184 @@
+const words = [
+            "Alexis Jules", "6,310 Jours",
+            "Dessin", "Echecs", "Développement web",
+            "Théâtre", "Gamedev", "Gamedesign",
+            "Animation", "Motivation", "Poker", "User Experience"
+        ];
+        
+        const floatingContainer = document.getElementById('floating-layer');
+        const wordObjects = [];
+        const minSpeed = 0.2; // Vitesse minimale pour éviter l'arrêt complet
+        
+        words.forEach(text => {
+            const el = document.createElement("div");
+            el.className = "word";
+            el.textContent = text;
+            floatingContainer.appendChild(el);
+            
+            const obj = {
+                el,
+                x: Math.random() * (window.innerWidth - 200),
+                y: Math.random() * (window.innerHeight - 100),
+                vx: (Math.random() - 0.5) * 2,
+                vy: (Math.random() - 0.5) * 2,
+                rotation: Math.random() * 360,
+                rotationSpeed: (Math.random() - 0.5) * 2,
+                dragging: false
+            };
+            
+            // Assurer une vitesse minimale initiale
+            if (Math.abs(obj.vx) < minSpeed) {
+                obj.vx = obj.vx >= 0 ? minSpeed : -minSpeed;
+            }
+            if (Math.abs(obj.vy) < minSpeed) {
+                obj.vy = obj.vy >= 0 ? minSpeed : -minSpeed;
+            }
+            
+            el.style.left = obj.x + "px";
+            el.style.top = obj.y + "px";
+            el.style.transform = `rotate(${obj.rotation}deg)`;
+            
+            makeDraggable(obj);
+            wordObjects.push(obj);
+        });
+        
+        function makeDraggable(obj) {
+            let offsetX, offsetY, lastX, lastY;
+            
+            obj.el.addEventListener("mousedown", e => {
+                obj.dragging = true;
+                offsetX = e.clientX - obj.x;
+                offsetY = e.clientY - obj.y;
+                lastX = obj.x;
+                lastY = obj.y;
+                obj.el.classList.add("dragging");
+                e.preventDefault();
+            });
+            
+            window.addEventListener("mousemove", e => {
+                if (obj.dragging) {
+                    obj.x = e.clientX - offsetX;
+                    obj.y = e.clientY - offsetY;
+                    
+                    const newVx = (obj.x - lastX) * 0.3;
+                    const newVy = (obj.y - lastY) * 0.3;
+                    obj.vx = newVx;
+                    obj.vy = newVy;
+                    
+                    obj.rotationSpeed += (Math.abs(newVx) + Math.abs(newVy)) * 0.4;
+                    
+                    lastX = obj.x;
+                    lastY = obj.y;
+                }
+            });
+            
+            window.addEventListener("mouseup", () => {
+                if (obj.dragging) {
+                    obj.dragging = false;
+                    obj.el.classList.remove("dragging");
+                    
+                    // Assurer une vitesse minimale après le lâcher
+                    if (Math.abs(obj.vx) < minSpeed && Math.abs(obj.vy) < minSpeed) {
+                        obj.vx = (Math.random() - 0.5) * minSpeed * 4;
+                        obj.vy = (Math.random() - 0.5) * minSpeed * 4;
+                    }
+                }
+            });
+        }
+        
+        function animate() {
+            for (const obj of wordObjects) {
+                if (!obj.dragging) {
+                    // Mouvement
+                    obj.x += obj.vx;
+                    obj.y += obj.vy;
+                    
+                    // Collision avec les bords
+                    const maxX = window.innerWidth - obj.el.offsetWidth;
+                    const maxY = window.innerHeight - obj.el.offsetHeight;
+                    
+                    if (obj.x <= 0) {
+                        obj.x = 0;
+                        obj.vx = Math.abs(obj.vx);
+                        obj.rotationSpeed += 2;
+                    }
+                    if (obj.x >= maxX) {
+                        obj.x = maxX;
+                        obj.vx = -Math.abs(obj.vx);
+                        obj.rotationSpeed -= 2;
+                    }
+                    if (obj.y <= 0) {
+                        obj.y = 0;
+                        obj.vy = Math.abs(obj.vy);
+                        obj.rotationSpeed += 2;
+                    }
+                    if (obj.y >= maxY) {
+                        obj.y = maxY;
+                        obj.vy = -Math.abs(obj.vy);
+                        obj.rotationSpeed -= 2;
+                    }
+                    
+                    obj.vx *= 0.998;
+                    obj.vy *= 0.998;
+                    
+                    if (Math.abs(obj.vx) < minSpeed) {
+                        obj.vx = obj.vx >= 0 ? minSpeed : -minSpeed;
+                    }
+                    if (Math.abs(obj.vy) < minSpeed) {
+                        obj.vy = obj.vy >= 0 ? minSpeed : -minSpeed;
+                    }
+                }
+                
+                obj.rotation += obj.rotationSpeed;
+                obj.rotationSpeed *= 0.9;
+                
+                if (Math.abs(obj.rotationSpeed) < 0.1) {
+                    obj.rotationSpeed = obj.rotationSpeed >= 0 ? 0.1 : -0.1;
+                }
+                
+                obj.el.style.left = obj.x + "px";
+                obj.el.style.top = obj.y + "px";
+                obj.el.style.transform = `rotate(${obj.rotation}deg)`;
+            }
+            
+            requestAnimationFrame(animate);
+        }
+        
+        // Gérer le redimensionnement de la fenêtre
+        window.addEventListener('resize', () => {
+            for (const obj of wordObjects) {
+                const maxX = window.innerWidth - obj.el.offsetWidth;
+                const maxY = window.innerHeight - obj.el.offsetHeight;
+                
+                if (obj.x > maxX) obj.x = maxX;
+                if (obj.y > maxY) obj.y = maxY;
+            }
+        });
+        
+        animate();
+
+const landingVideo = document.getElementById("main-video");
+const stickyNav = document.getElementById("sticky-nav");
+const landingNavButtons = document.querySelector("#landing .nav-buttons");
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 100) {
+        landingVideo.style.transform = "scale(0.5) translateY(-100px)";
+        landingVideo.style.opacity = "0";
+        stickyNav.classList.add("show");
+        landingNavButtons.classList.add("fade-out");
+    } else {
+        landingVideo.style.transform = "scale(1) translateY(0)";
+        landingVideo.style.opacity = "1";
+        stickyNav.classList.remove("show");
+        landingNavButtons.classList.remove("fade-out");
+    }
+});
+
+
+
 // CAROUSEL FUNCTIONALITY
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slide');

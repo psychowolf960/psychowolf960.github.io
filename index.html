@@ -25,21 +25,35 @@ Vous présente ses excuses pour son code spaghetti, mais qui marche :0 (le respo
 </head>
 
 <body>
-    <header id="landing">
-        <canvas></canvas>
-        <div class="content">
-            <video width="1920" height="1080" loop autoplay muted>
-                <source src="Videos/Titre.mp4" type="video/mp4">
-            </video>
-            <nav class="nav-buttons">
-                <a href="#jeux" class="neon-btn">Jeux</a>
-                <a href="#sites" class="neon-btn">Sites Web</a>
-                <a href="#art" class="neon-btn">Art</a>
-                <a href="#timeline" class="neon-btn">Parcours</a>
-            </nav>
-        </div>
-    </header>
+<div id="floating-layer"></div>
+<header id="landing">
+    <canvas></canvas>
+    <div class="content">
+        <video id="main-video" loop autoplay muted>
+            <source src="Videos/Titre.mp4" type="video/mp4">
+        </video>
+        <nav class="nav-buttons">
+            <a href="#jeux" class="neon-btn">Jeux</a>
+            <a href="#sites" class="neon-btn">Sites Web</a>
+            <a href="#art" class="neon-btn">Art</a>
+            <a href="#timeline" class="neon-btn">Parcours</a>
+        </nav>
+    </div>
+</header>
 
+<nav id="sticky-nav">
+    <div class="logo-small">
+        <img src="logo.svg" alt="logo-small">
+    </div>
+    <div class="nav-buttons">
+        <a href="#jeux" class="neon-btn">Jeux</a>
+        <a href="#sites" class="neon-btn">Sites Web</a>
+        <a href="#art" class="neon-btn">Art</a>
+        <a href="#timeline" class="neon-btn">Parcours</a>
+    </div>
+</nav>
+
+    
     <section class="section" id="jeux">
         <img src="Images/Jeux.gif" alt="JEUX VIDEOS" class="section-title">
         <div class="image-grid">
@@ -95,7 +109,7 @@ Vous présente ses excuses pour son code spaghetti, mais qui marche :0 (le respo
 
         </div>
     </section>
-
+    
     <section class="section sites" id="sites">
         <img src="Images/Sites.gif" alt="SITES" class="section-title">
         <div class="art-carousel">
@@ -108,8 +122,9 @@ Vous présente ses excuses pour son code spaghetti, mais qui marche :0 (le respo
                     <div class="image-caption">Arkensoi</div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="Images/Sites/Coda.png" alt="Coda">
-                    <div class="image-caption">Coda</div>
+                    <a href="https://aleck6.rf.gd/" download>
+                        <img src="Images/Sites/Coda.png" alt="Coda">
+                    </a>
                 </div>
                 <div class="carousel-slide">
                     <a href="https://tagz-map.netlify.app/" download>
