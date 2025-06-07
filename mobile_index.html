@@ -21,39 +21,46 @@ Vous présente ses excuses pour son code spaghetti, mais qui marche :0 (le respo
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Oswald:wght@400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile_style.css">
+    <script>
+  if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    // Redirige vers la page mobile
+    window.location.href = "/mobile_index.html";
+  }
+</script>
+
 </head>
 
 <body>
-<div id="floating-layer"></div>
-<header id="landing">
-    <canvas></canvas>
-    <div class="content">
-        <video id="main-video" loop autoplay muted>
-            <source src="Videos/Titre.mp4" type="video/mp4">
-        </video>
-        <nav class="nav-buttons">
+    <div id="floating-layer"></div>
+    <header id="landing">
+        <canvas></canvas>
+        <div class="content">
+            <video id="main-video" loop autoplay muted>
+                <source src="Videos/Titre.mp4" type="video/mp4">
+            </video>
+            <nav class="nav-buttons">
+                <a href="#jeux" class="neon-btn">Jeux</a>
+                <a href="#sites" class="neon-btn">Sites Web</a>
+                <a href="#art" class="neon-btn">Art</a>
+                <a href="#timeline" class="neon-btn">Parcours</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav id="sticky-nav">
+        <div class="logo-small">
+            <img src="logo.svg" alt="logo-small">
+        </div>
+        <div class="nav-buttons">
             <a href="#jeux" class="neon-btn">Jeux</a>
             <a href="#sites" class="neon-btn">Sites Web</a>
             <a href="#art" class="neon-btn">Art</a>
             <a href="#timeline" class="neon-btn">Parcours</a>
-        </nav>
-    </div>
-</header>
+        </div>
+    </nav>
 
-<nav id="sticky-nav">
-    <div class="logo-small">
-        <img src="logo.svg" alt="logo-small">
-    </div>
-    <div class="nav-buttons">
-        <a href="#jeux" class="neon-btn">Jeux</a>
-        <a href="#sites" class="neon-btn">Sites Web</a>
-        <a href="#art" class="neon-btn">Art</a>
-        <a href="#timeline" class="neon-btn">Parcours</a>
-    </div>
-</nav>
 
-    
     <section class="section" id="jeux">
         <img src="Images/Jeux.gif" alt="JEUX VIDEOS" class="section-title">
         <div class="image-grid">
@@ -109,35 +116,31 @@ Vous présente ses excuses pour son code spaghetti, mais qui marche :0 (le respo
 
         </div>
     </section>
-    
+
     <section class="section sites" id="sites">
         <img src="Images/Sites.gif" alt="SITES" class="section-title">
-        <div class="art-carousel">
-            <div class="carousel-container" id="carousel-container">
-                <div class="carousel-slide">
-                    <a href="https://arkensoi.com/" download>
-                        <img src="Images/Sites/Arkensoi.png" alt="Arkensoi">
-                    </a>
-
-                    <div class="image-caption">Arkensoi</div>
-                </div>
-                <div class="carousel-slide">
-                    <a href="https://aleck6.rf.gd/" download>
-                        <img src="Images/Sites/Coda.png" alt="Coda">
-                    </a>
-                </div>
-                <div class="carousel-slide">
-                    <a href="https://tagz-map.netlify.app/" download>
-                        <img src="Images/Sites/Strag.png" alt="Strag">
-                    </a>
-                    <div class="image-caption">Strag</div>
-                </div>
+        <div class="sites-stack">
+            <div class="stack-item">
+                <div class="image-caption">ARKENSOI</div>
+                <a href="https://arkensoi.com/">
+                    <img src="Images/Sites/Arkensoi.png" alt="Arkensoi">
+                </a>
             </div>
-            <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">‹</button>
-            <button class="carousel-nav carousel-next" onclick="changeSlide(1)">›</button>
-            <div class="carousel-dots" id="carousel-dots"></div>
+            <div class="stack-item">
+                <div class="image-caption">CODA</div>
+                <a href="https://aleck6.rf.gd/">
+                    <img src="Images/Sites/Coda.png" alt="Coda">
+                </a>
+            </div>
+            <div class="stack-item">
+                <div class="image-caption">STRAG</div>
+                <a href="https://tagz-map.netlify.app/">
+                    <img src="Images/Sites/Strag.png" alt="Strag">
+                </a>
+            </div>
         </div>
     </section>
+
 
     <section class="section art" id="art">
         <img src="Images/Art.gif" alt="ART" class="section-title">
@@ -171,7 +174,7 @@ Vous présente ses excuses pour son code spaghetti, mais qui marche :0 (le respo
             <div class="gallery-item" data-type="video">
                 <video poster="Images/Art/Red.png" muted>
                     <source src="Images/Art/Red.mp4" type="video/mp4">
-            </video>
+                </video>
             </div>
             <div class="gallery-item" data-type="image">
                 <img src="Images/Art/7.png" alt="Image 7">
@@ -189,9 +192,9 @@ Vous présente ses excuses pour son code spaghetti, mais qui marche :0 (le respo
                 <video poster="Images/Art/Birdie.png" muted>
                     <source src="Images/Art/birdie.mp4" type="video/mp4">
                 </video>
-            <div class="gallery-item" data-type="image">
-                <img src="Images/Art/11.png" alt="Image 11">
-            </div>
+                <div class="gallery-item" data-type="image">
+                    <img src="Images/Art/11.png" alt="Image 11">
+                </div>
             </div>
         </div>
         <div id="modal" class="modal">
@@ -291,7 +294,6 @@ Vous présente ses excuses pour son code spaghetti, mais qui marche :0 (le respo
             }
         });
     </script>
-    <script src="script.js"></script>
 </body>
 
 </html>

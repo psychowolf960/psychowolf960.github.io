@@ -144,20 +144,6 @@ a.neon-btn:hover {
     }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    h1.glow-text {
-        font-size: 2.8rem;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-    }
-}
 
 
 video {
@@ -530,69 +516,6 @@ video {
     letter-spacing: 0.1em;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .image-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-
-    .image-item {
-        grid-column: auto !important;
-        grid-row: auto !important;
-    }
-
-    .carousel-nav {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-    }
-
-    .timeline-line {
-        left: 30px;
-    }
-
-    .timeline-item {
-        flex-direction: row !important;
-    }
-
-    .timeline-dot {
-        left: 30px;
-    }
-
-    .timeline-content {
-        width: calc(100% - 120px);
-        margin-left: 80px;
-        margin-right: 0;
-    }
-
-    .timeline-content::before {
-        left: -30px !important;
-        right: auto !important;
-        border-right-color: #fff !important;
-        border-left-color: transparent !important;
-    }
-
-    .timeline-item::before {
-        left: 30px;
-        transform: translateX(-50%);
-    }
-}
-
-@media (max-width: 480px) {
-    .section {
-        padding: 40px 15px;
-    }
-
-    .timeline-content {
-        padding: 20px;
-        margin-left: 60px;
-    }
-
-    .timeline-content h3 {
-        font-size: 1.5rem;
-    }
-}
 
 /* Animations */
 @keyframes fadeInUp {
