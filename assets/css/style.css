@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&family=Lexend+Mega:wght@700&family=Public+Sans:wght@400;600&display=swap');
+
 /* NeoBrutalism Portfolio - Custom Styles */
 
 :root {
@@ -7,7 +9,7 @@
     --accent-blue: #4ecdc4;
     --accent-green: #4ecd72;
     --accent-yellow: #ffe66d;
-    --shadow-brutal: 4px 4px 0px #000000;
+    --shadow-brutal: 4px 4px 0px #ffffff;
     --shadow-brutal-lg: 8px 8px 0px #000000;
 html, body, * {
     cursor: crosshair !important;
@@ -22,7 +24,7 @@ html, body, * {
 
 body {
     scroll-behavior: smooth;
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'Stint Ultra Expanded', 'Lexend Mega', 'Public Sans', sans-serif;
     line-height: 1.6;
     color: var(--primary-black);
     background-color: var(--primary-white);
@@ -44,27 +46,28 @@ body {
     left: 0;
     width: 80px;
     height: 100vh;
-    background-color: var(--primary-black);
+    background-color: var(--primary-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
     z-index: 1000;
     box-shadow: 4px 0 0px var(--accent-orange);
+    border-right: 3px solid var(--primary-black);
 }
 
 .side-nav-brand {
-    font-family: 'Lexend Mega', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Stint Ultra Expanded','Lexend Mega', sans-serif;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: var(--primary-white);
-    background-color: var(--accent-orange);
+    color: var(--primary-black);
+    background-color: var(--accent-yellow);
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid var(--primary-white);
+    border: 3px solid var(--primary-black);
     margin-bottom: 2rem;
     transform: rotate(-5deg);
     transition: transform 0.3s ease;
@@ -89,7 +92,7 @@ body {
     justify-content: center;
     width: 50px;
     height: 50px;
-    color: var(--primary-white);
+    color: var(--primary-black);
     text-decoration: none;
     border: 3px solid transparent;
     transition: all 0.3s ease;
@@ -103,7 +106,8 @@ body {
 .side-nav-link:hover,
 .side-nav-link.active {
     background-color: var(--accent-orange);
-    border-color: var(--primary-white);
+    border-color: var(--primary-black);
+    color: var(--primary-white);
     transform: scale(1.1);
     box-shadow: var(--shadow-brutal);
 }
@@ -123,10 +127,9 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lexend Mega', sans-serif;
+    font-family: 'Stint Ultra Expanded','Lexend Mega', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
 }
 
 .section-title {
@@ -151,26 +154,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Selection Box Effect */
 .selection-box {
+    border: 3px dashed #000;
     position: relative;
     display: inline-block;
     background-color: var(--accent-yellow);
     padding: 0.5rem 1rem;
-    border: 3px solid var(--primary-black);
     box-shadow: var(--shadow-brutal);
     transform: rotate(-1deg);
     animation: selection-highlight 3s ease-in-out infinite;
 }
 
-@keyframes selection-highlight {
-    0%, 100% { 
-        background-color: var(--accent-yellow);
-        transform: rotate(-1deg);
-    }
-    50% { 
-        background-color: var(--accent-orange);
-        transform: rotate(1deg);
-    }
-}
 
 /* Hero Section */
 .hero-section {
@@ -205,6 +198,15 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0.9;
     margin-bottom: 1rem;
     text-shadow: 4px 4px 0px var(--accent-orange);
+    border: 3px dashed #000;
+    box-shadow: 0 0 0 4px --shadow-brutal, 4px 4px;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    display: inline-block;
+    position: relative;
+    min-width: 7ch;
+    min-height: 2.4ch;
+    background: var(--accent-yellow)
 }
 
 .hero-subtitle {
@@ -219,6 +221,11 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+}
+
+/* Orange badge text styling */
+.badge.orange .badge-text {
+    color: var(--primary-white) !important;
 }
 
 /* CTA Section */
@@ -288,26 +295,53 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 2fr;
     gap: 4rem;
     align-items: start;
 }
 
 .about-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.8;
+    font-weight: 600;
+    color: var(--primary-white);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border: 3px solid var(--primary-white);
+    box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.2);
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
 }
 
 .skill-card {
     background-color: var(--primary-white);
     transform: rotate(1deg);
     transition: transform 0.3s ease;
+    padding: 0.5rem;
+}
+
+.skill-card .nb-card-content {
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.skill-icon {
+    font-size: 1.3rem;
+    color: var(--accent-orange);
+    margin-bottom: 0;
+}
+
+.skill-card .nb-card-title {
+    font-size: 1rem !important;
+    text-align: center;
+    margin: 0;
 }
 
 .skill-card:nth-child(even) {
@@ -428,18 +462,19 @@ h1, h2, h3, h4, h5, h6 {
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    gap: 0.8rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .contact-item i {
-    font-size: 2rem;
-    background-color: var(--primary-white);
-    color: var(--accent-orange);
-    padding: 0.5rem;
-    border: 3px solid var(--primary-black);
-    box-shadow: var(--shadow-brutal);
+    font-size: 1.2rem;
+    background-color: var(--accent-orange);
+    color: var(--primary-white);
+    padding: 0.4rem;
+    border: 2px solid var(--primary-white);
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
 }
 
 .contact-form {
@@ -447,20 +482,26 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem;
     border: 4px solid var(--primary-black);
     box-shadow: var(--shadow-brutal-lg);
-    transform: rotate(-1deg);
 }
 
-.contact-form:hover {
-    transform: rotate(0deg);
-}
 
 /* Footer */
 .footer {
-    padding: 2rem 0;
-    background-color: var(--primary-black);
-    color: var(--primary-white);
+    padding: 1.5rem 0;
+    background-color: var(--primary-white);
+    color: var(--primary-black);
     text-align: center;
-    font-weight: 600;
+    font-weight: 400;
+    border-top: 3px solid var(--primary-black);
+}
+
+.footer-contact-info {
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 /* Custom NeoBrutalism enhancements */
@@ -554,6 +595,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
     }
     
     .projects-grid {

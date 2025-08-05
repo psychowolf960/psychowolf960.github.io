@@ -28,7 +28,12 @@
     <!-- Side Navigation -->
     <nav class="side-navbar" role="navigation" aria-label="Navigation principale">
         <div class="side-nav-brand">AV</div>
-        <ul class="side-nav-links" role="menubar">
+        <div class="burger" id="burger-menu" aria-label="Ouvrir le menu" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="side-nav-links" id="side-nav-links" role="menubar">
             <li class="side-nav-item" role="none">
                 <a href="#hero" class="side-nav-link active" role="menuitem" title="Accueil">
                     <i class="ph ph-house"></i>
@@ -109,31 +114,37 @@
                 <div class="skills-grid">
                     <div class="nb-card skill-card">
                         <div class="nb-card-content">
+                            <i class="ph ph-file-html skill-icon"></i>
                             <h3 class="nb-card-title">HTML</h3>
                         </div>
                     </div>
                     <div class="nb-card skill-card">
                         <div class="nb-card-content">
+                            <i class="ph ph-paint-brush skill-icon"></i>
                             <h3 class="nb-card-title">CSS</h3>
                         </div>
                     </div>
                     <div class="nb-card skill-card">
                         <div class="nb-card-content">
+                            <i class="ph ph-file-js skill-icon"></i>
                             <h3 class="nb-card-title">JavaScript</h3>
                         </div>
                     </div>
                     <div class="nb-card skill-card">
                         <div class="nb-card-content">
+                            <i class="ph ph-file-py skill-icon"></i>
                             <h3 class="nb-card-title">Python</h3>
                         </div>
                     </div>
                     <div class="nb-card skill-card">
                         <div class="nb-card-content">
+                            <i class="ph ph-moon skill-icon"></i>
                             <h3 class="nb-card-title">Lua</h3>
                         </div>
                     </div>
                     <div class="nb-card skill-card">
                         <div class="nb-card-content">
+                            <i class="ph ph-game-controller skill-icon"></i>
                             <h3 class="nb-card-title">Gdscript</h3>
                         </div>
                     </div>
@@ -249,20 +260,75 @@
         <div class="section-container">
             <h2 class="section-title">CONTACT</h2>
             <div class="contact-content" style="width:100%;display:flex;justify-content:center;align-items:center;">
-                <form class="contact-form" style="width:100%;max-width:700px;margin:auto;" action="https://formspree.io/f/your-form-id" method="POST">
-                    <div class="nb-form-group">
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" name="name" class="nb-input default" required>
+                <form class="contact-form" style="width:100%;max-width:700px;margin:auto;" action="https://formspree.io/f/xqalyknq" method="POST">
+                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
+                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
+                            <label for="name">Nom & Prénom *</label>
+                            <input type="text" id="name" name="Nom et Prénom" class="nb-input default" required>
+                        </div>
+                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="Email" class="nb-input default" required>
+                        </div>
                     </div>
-                    <div class="nb-form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="nb-input default" required>
+                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
+                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="Téléphone" class="nb-input default">
+                        </div>
+                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
+                            <label for="company">Entreprise / Organisation</label>
+                            <input type="text" id="company" name="Entreprise / Organisation" class="nb-input default">
+                        </div>
                     </div>
-                    <div class="nb-form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" class="nb-textarea" placeholder="Votre message..." required></textarea>
+                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
+                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
+                            <label for="project-type">Type de projet *</label>
+                            <select id="project-type" name="Type de projet" class="nb-input default" required>
+                                <option value="">Sélectionnez</option>
+                                <option>Site vitrine</option>
+                                <option>Site e-commerce</option>
+                                <option>Application web</option>
+                                <option>Jeu vidéo</option>
+                                <option>Refonte de site existant</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
+                            <label for="budget">Budget approximatif</label>
+                            <select id="budget" name="Budget approximatif" class="nb-input default">
+                                <option value="">Sélectionnez</option>
+                                <option>200€ - 300€</option>
+                                <option>300€ - 500€</option>
+                                <option>500€ - 800€</option>
+                                <option>800€+</option>
+                            </select>
+                        </div>
                     </div>
-                    <button type="submit" class="nb-button orange">Envoyer</button>
+                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
+                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
+                            <label for="delay">Délai souhaité</label>
+                            <select id="delay" name="Délai souhaité" class="nb-input default">
+                                <option value="">Sélectionnez</option>
+                                <option>Urgent (moins d’un mois)</option>
+                                <option>1-2 mois</option>
+                                <option>2-3 mois</option>
+                                <option>3-6 mois</option>
+                                <option>Flexible</option>
+                            </select>
+                        </div>
+                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
+                            <label for="references">Sites de référence / Inspirations</label>
+                            <textarea id="references" name="Sites de référence / Inspirations" class="nb-textarea" placeholder="Ajoutez des liens ou des exemples..."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
+                        <div class="nb-form-group" style="flex:1 1 100%;min-width:250px;">
+                            <label for="description">Description détaillée du projet *</label>
+                            <textarea id="description" name="Description détaillée du projet" class="nb-textarea" placeholder="Décrivez votre projet..." required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="nb-button orange" style="margin-top:1.5rem;width:100%;max-width:300px;">Envoyer</button>
                 </form>
             </div>
         </div>
@@ -286,6 +352,25 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script>
+    // Burger menu functionality
+    const burger = document.getElementById('burger-menu');
+    const navLinks = document.getElementById('side-nav-links');
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+    burger.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            navLinks.classList.toggle('open');
+        }
+    });
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.side-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) navLinks.classList.remove('open');
+        });
+    });
+    </script>
 </body>
 
 </html>
