@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&family=Lexend+Mega:wght@700&family=Public+Sans:wght@400;600&display=swap');
 
+/* NeoBrutalism Portfolio - Custom Styles */
+
 .surligne-orange {
     text-decoration: underline;
-    text-decoration-thickness: 4px;
+    text-decoration-thickness: 3px;
     text-underline-offset: 4px;
-    text-decoration-color: #ff2323;
+    text-decoration-color: var(#ff4e4e) !important;
     color: inherit;
     font-weight: 600;
 }
-@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&family=Lexend+Mega:wght@700&family=Public+Sans:wght@400;600&display=swap');
-
-/* NeoBrutalism Portfolio - Custom Styles */
 
 :root {
     --primary-black: #000000;
     --primary-white: #ffffff;
     --accent-orange: #ff6b6b;
-    --accent-blue: #49c0b8;
+    --accent-blue: #4ecdc4;
     --accent-green: #4ecd72;
     --accent-yellow: #ffe66d;
     --accent-purple: #8976c4;
@@ -25,6 +24,7 @@
 html, body, * {
     cursor: crosshair !important;
 }
+
 }
 
 * {
@@ -85,7 +85,7 @@ body {
 }
 
 .side-nav-brand:hover {
-    transform: rotate(2deg) scale(1.1);
+    transform: rotate(5deg) scale(1.1);
 }
 
 .side-nav-links {
