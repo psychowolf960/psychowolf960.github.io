@@ -168,9 +168,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Console easter egg
-    console.log('%c🎮 ALEXIS VENTRE - PORTFOLIO 🎮', 'color: #ff6600; font-size: 20px; font-weight: bold;');
-    console.log('%cMerci de visiter mon portfolio! 🚀', 'color: #0066ff; font-size: 14px;');
-   
+    console.log('%cCONSOLE - PORTFOLIO', 'color: #ff6600; font-size: 20px; font-weight: bold;');
+    console.log('%c Coucou 👀 ', 'color: #0066ff; font-size: 14px;');
+
 });
 
 // Performance optimization: Debounce scroll events
