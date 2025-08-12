@@ -165,42 +165,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Portrait image easter egg
-    const portrait = document.querySelector('.portrait');
-    if (portrait) {
-        let clickCount = 0;
-        portrait.addEventListener('click', function() {
-            clickCount++;
-            if (clickCount === 3) {
-                this.style.filter = 'hue-rotate(180deg)';
-                setTimeout(() => {
-                    this.style.filter = 'none';
-                    clickCount = 0;
-                }, 2000);
-            }
-        });
-    }
 
-    // Keyboard navigation enhancement
-    document.addEventListener('keydown', function(e) {
-        if (e.altKey && e.key >= '1' && e.key <= '4') {
-            e.preventDefault();
-            const sectionIds = ['about', 'projects', 'games', 'contact'];
-            const targetSection = document.getElementById(sectionIds[parseInt(e.key) - 1]);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }
-    });
 
     // Console easter egg
     console.log('%c🎮 ALEXIS VENTRE - PORTFOLIO 🎮', 'color: #ff6600; font-size: 20px; font-weight: bold;');
     console.log('%cMerci de visiter mon portfolio! 🚀', 'color: #0066ff; font-size: 14px;');
-    console.log('%cUtilisez Alt+1,2,3,4 pour naviguer rapidement entre les sections!', 'color: #00cc66; font-size: 12px;');
+   
 });
 
 // Performance optimization: Debounce scroll events
