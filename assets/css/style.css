@@ -1,3 +1,12 @@
+/* Surlignage orange accentué */
+.surligne-orange {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 4px;
+    text-decoration-color: #ff2323;
+    color: inherit;
+    font-weight: 600;
+}
 @import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&family=Lexend+Mega:wght@700&family=Public+Sans:wght@400;600&display=swap');
 
 /* NeoBrutalism Portfolio - Custom Styles */
@@ -6,10 +15,11 @@
     --primary-black: #000000;
     --primary-white: #ffffff;
     --accent-orange: #ff6b6b;
-    --accent-blue: #4ecdc4;
+    --accent-blue: #49c0b8;
     --accent-green: #4ecd72;
     --accent-yellow: #ffe66d;
-    --shadow-brutal: 4px 4px 0px #ffffff;
+    --accent-purple: #8976c4;
+    --shadow-brutal: 4px 4px 0px #000000;
     --shadow-brutal-lg: 8px 8px 0px #000000;
 html, body, * {
     cursor: crosshair !important;
@@ -74,7 +84,7 @@ body {
 }
 
 .side-nav-brand:hover {
-    transform: rotate(5deg) scale(1.1);
+    transform: rotate(2deg) scale(1.1);
 }
 
 .side-nav-links {
@@ -182,17 +192,33 @@ h1, h2, h3, h4, h5, h6 {
         var(--primary-white) 75%);
     background-size: 60px 60px;
     background-position: 0 0, 30px 30px;
-    padding: 2rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
 }
 
 .hero-content {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
 }
 
+/* Ensure hero text is centered */
+.hero-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .hero-title {
     font-size: clamp(3rem, 10vw, 8rem);
     line-height: 0.9;
@@ -201,10 +227,9 @@ h1, h2, h3, h4, h5, h6 {
     border: 3px dashed #000;
     box-shadow: 0 0 0 4px --shadow-brutal, 4px 4px;
     padding: 0.5rem 1.2rem;
-    border-radius: 6px;
     display: inline-block;
     position: relative;
-    min-width: 7ch;
+    min-width: 8.4ch;
     min-height: 2.4ch;
     background: var(--accent-yellow)
 }
@@ -220,7 +245,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin: 1rem;
+    justify-content: center;
 }
 
 /* Orange badge text styling */
@@ -235,6 +261,9 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-brutal-lg);
     padding: 1.5rem;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cta-title {
@@ -258,6 +287,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 0.5rem;
     font-weight: 600;
     width: fit-content;
+    margin: 0 auto;
 }
 
 .cta-button i {
@@ -276,6 +306,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .portrait:hover {
     transform: rotate(2deg) scale(1.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* About Section */
@@ -295,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 3fr 2fr;
     gap: 4rem;
     align-items: start;
 }
@@ -308,6 +342,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border: 3px solid var(--primary-white);
+    border-style: dotted;
     box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.2);
 }
 
@@ -333,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skill-icon {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--accent-orange);
     margin-bottom: 0;
 }
@@ -368,14 +403,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
 }
 
 .project-card {
     background-color: var(--primary-white);
     transform: rotate(-1deg);
     transition: transform 0.3s ease;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
 }
 
 .project-card:nth-child(2n) {
@@ -393,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Games Section */
 .games-section {
     padding: 4rem 0;
-    background-color: var(--primary-black);
+    background-color: var(--accent-purple);
     color: var(--primary-white);
 }
 
@@ -486,6 +524,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Footer */
+
 .footer {
     padding: 1.5rem 0;
     background-color: var(--primary-white);
@@ -493,15 +532,59 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-weight: 400;
     border-top: 3px solid var(--primary-black);
+    width: 100%;
 }
 
 .footer-contact-info {
     margin-bottom: 1rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer p {
     font-size: 0.9rem;
     opacity: 0.8;
+    margin: 0.5rem 0 0 0;
+}
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1rem 0;
+        font-size: 0.95rem;
+    }
+    .footer-contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .footer .contact-item {
+        width: 100%;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .footer p {
+        font-size: 0.85rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 0.7rem 0;
+        font-size: 0.9rem;
+    }
+    .footer-contact-info {
+        gap: 0.3rem;
+    }
+    .footer p {
+        font-size: 0.8rem;
+    }
 }
 
 /* Custom NeoBrutalism enhancements */
@@ -599,7 +682,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 4fr;
     }
     
     .games-grid {
