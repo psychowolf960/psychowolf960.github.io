@@ -35,27 +35,27 @@
         </div>
         <ul class="side-nav-links" id="side-nav-links" role="menubar">
             <li class="side-nav-item" role="none">
-                <a href="#hero" class="side-nav-link active" role="menuitem" title="Accueil">
+                <a href="#hero" class="side-nav-link active" role="menuitem" data-i18n-title="nav_home" title="Accueil">
                     <i class="ph ph-house"></i>
                 </a>
             </li>
             <li class="side-nav-item" role="none">
-                <a href="#about" class="side-nav-link" role="menuitem" title="À propos">
+                <a href="#about" class="side-nav-link" role="menuitem" data-i18n-title="nav_about" title="À propos">
                     <i class="ph ph-user"></i>
                 </a>
             </li>
             <li class="side-nav-item" role="none">
-                <a href="#projects" class="side-nav-link" role="menuitem" title="Projets Web">
+                <a href="#projects" class="side-nav-link" role="menuitem" data-i18n-title="nav_projects" title="Projets Web">
                     <i class="ph ph-code"></i>
                 </a>
             </li>
             <li class="side-nav-item" role="none">
-                <a href="#games" class="side-nav-link" role="menuitem" title="Jeux Vidéo">
+                <a href="#games" class="side-nav-link" role="menuitem" data-i18n-title="nav_games" title="Jeux Vidéo">
                     <i class="ph ph-game-controller"></i>
                 </a>
             </li>
             <li class="side-nav-item" role="none">
-                <a href="#contact" class="side-nav-link" role="menuitem" title="Contact">
+                <a href="#contact" class="side-nav-link" role="menuitem" data-i18n-title="nav_contact" title="Contact">
                     <i class="ph ph-envelope"></i>
                 </a>
             </li>
@@ -88,11 +88,11 @@
                 
                 <!-- CTA Section -->
                 <div class="cta-section">
-                    <h3 class="cta-title">Besoin d'un site web ?</h3>
-                    <p class="cta-text">Je crée des sites <span class="surligne-orange">modernes, rapides et sur-mesure</span> pour développer votre activité.</p>
+                    <h3 class="cta-title" data-i18n="cta_title">Besoin d'un site web ?</h3>
+                    <p class="cta-text" data-i18n-html="cta_text">Je crée des sites <span class="surligne-orange">modernes, rapides et sur-mesure</span> pour développer votre activité.</p>
                     <button class="nb-button orange cta-button">
                         <i class="ph ph-rocket-launch"></i>
-                        Créons votre site !
+                        <span data-i18n="cta_button">Créons votre site !</span>
                     </button>
                 </div>
             </div>
@@ -103,12 +103,12 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="section-container">
-            <h2 class="section-title">À PROPOS</h2>
+            <h2 class="section-title" data-i18n="about_title">À PROPOS</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Je <span class="surligne-orange">développe</span> mes compétences pratiques par la création de sites et l'expérimentation de logiciels et moteurs de jeu.<br><br></p>
-                    <p>Mis à part ça j'aime bien les <span class="surligne-orange">échecs</span> (le jeu), les <span class="surligne-orange">cookies</span> (les biscuits) et les <span class="surligne-orange">Binturong</span> (l'animal)<br> </p>
-                    <p><i><span class="surligne-orange">Passionnant...</span></i></p>
+                    <p data-i18n-html="about_p1">Je <span class="surligne-orange">développe</span> mes compétences pratiques par la création de sites et l'expérimentation de logiciels et moteurs de jeu.<br><br></p>
+                    <p data-i18n-html="about_p2">Mis à part ça j'aime bien les <span class="surligne-orange">échecs</span> (le jeu), les <span class="surligne-orange">cookies</span> (les biscuits) et les <span class="surligne-orange">Binturong</span> (l'animal)<br> </p>
+                    <p data-i18n-html="about_p3"><i><span class="surligne-orange">Passionnant...</span></i></p>
                 </div>
                 <div class="skills-grid">
                     <div class="nb-card skill-card">
@@ -155,7 +155,7 @@
     <!-- Web Projects Section -->
     <section id="projects" class="projects-section">
         <div class="section-container">
-            <h2 class="section-title">PROJETS WEB</h2>
+            <h2 class="section-title" data-i18n="projects_title">PROJETS WEB</h2>
             <div class="projects-grid">
                 <div class="nb-card project-card">
                     <a href="https://fishy-river.netlify.app/" target="_blank" rel="noopener">
@@ -210,7 +210,7 @@
     <!-- Games Section -->
     <section id="games" class="games-section">
         <div class="section-container">
-            <h2 class="section-title">JEUX VIDÉO</h2>
+            <h2 class="section-title" data-i18n="games_title">JEUX VIDÉO</h2>
             <div class="games-grid">
                 <div class="nb-card game-card">
                     <img src="assets/images/games/Better.gif" alt="Better" class="nb-card-img">
@@ -274,77 +274,77 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="section-container">
-            <h2 class="section-title">CONTACT</h2>
+            <h2 class="section-title" data-i18n="contact_title">CONTACT</h2>
             <div class="contact-content" style="width:100%;display:flex;justify-content:center;align-items:center;">
                 <form class="contact-form" style="width:100%;max-width:700px;margin:auto;" action="https://formspree.io/f/xqalyknq" method="POST">
                     <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
                         <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="name">Nom & Prénom *</label>
+                            <label for="name" data-i18n="name_label">Nom & Prénom *</label>
                             <input type="text" id="name" name="Nom et Prénom" class="nb-input default" required>
                         </div>
                         <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="email">Email *</label>
+                            <label for="email" data-i18n="email_label">Email *</label>
                             <input type="email" id="email" name="Email" class="nb-input default" required>
                         </div>
                     </div>
                     <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
                         <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="phone">Téléphone</label>
+                            <label for="phone" data-i18n="phone_label">Téléphone</label>
                             <input type="tel" id="phone" name="Téléphone" class="nb-input default">
                         </div>
                         <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="company">Entreprise / Organisation</label>
+                            <label for="company" data-i18n="company_label">Entreprise / Organisation</label>
                             <input type="text" id="company" name="Entreprise / Organisation" class="nb-input default">
                         </div>
                     </div>
                     <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
                         <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="project-type">Type de projet *</label>
+                            <label for="project-type" data-i18n="project_type_label">Type de projet *</label>
                             <select id="project-type" name="Type de projet" class="nb-input default" required>
-                                <option value="">Sélectionnez</option>
-                                <option>Site vitrine</option>
-                                <option>Site e-commerce</option>
-                                <option>Application web</option>
-                                <option>Jeu vidéo</option>
-                                <option>Refonte de site existant</option>
-                                <option>Autre</option>
+                                <option value="" data-i18n="select_placeholder">Sélectionnez</option>
+                                <option data-i18n="option_site_vitrine">Site vitrine</option>
+                                <option data-i18n="option_ecommerce">Site e-commerce</option>
+                                <option data-i18n="option_web_app">Application web</option>
+                                <option data-i18n="option_game">Jeu vidéo</option>
+                                <option data-i18n="option_refonte">Refonte de site existant</option>
+                                <option data-i18n="option_other">Autre</option>
                             </select>
                         </div>
                         <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="budget">Budget approximatif</label>
+                            <label for="budget" data-i18n="budget_label">Budget approximatif</label>
                             <select id="budget" name="Budget approximatif" class="nb-input default">
-                                <option value="">Sélectionnez</option>
-                                <option>200€ - 300€</option>
-                                <option>300€ - 500€</option>
-                                <option>500€ - 800€</option>
-                                <option>800€+</option>
+                                <option value="" data-i18n="select_placeholder">Sélectionnez</option>
+                                <option data-i18n="budget_opt1">200€ - 300€</option>
+                                <option data-i18n="budget_opt2">300€ - 500€</option>
+                                <option data-i18n="budget_opt3">500€ - 800€</option>
+                                <option data-i18n="budget_opt4">800€+</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
                         <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="delay">Délai souhaité</label>
+                            <label for="delay" data-i18n="delay_label">Délai souhaité</label>
                             <select id="delay" name="Délai souhaité" class="nb-input default">
-                                <option value="">Sélectionnez</option>
-                                <option>Urgent (moins d’une semaine)</option>
-                                <option>1-2 semaines</option>
-                                <option>2-3 semaines</option>
-                                <option>3-6 semaines</option>
-                                <option>Flexible</option>
+                                <option value="" data-i18n="select_placeholder">Sélectionnez</option>
+                                <option data-i18n="delay_opt1">Urgent (moins d’une semaine)</option>
+                                <option data-i18n="delay_opt2">1-2 semaines</option>
+                                <option data-i18n="delay_opt3">2-3 semaines</option>
+                                <option data-i18n="delay_opt4">3-6 semaines</option>
+                                <option data-i18n="delay_opt5">Flexible</option>
                             </select>
                         </div>
                         <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="references">Sites de référence / Inspirations</label>
-                            <textarea id="references" name="Sites de référence / Inspirations" class="nb-textarea" placeholder="Ajoutez des liens ou des exemples..."></textarea>
+                            <label for="references" data-i18n="references_label">Sites de référence / Inspirations</label>
+                            <textarea id="references" name="Sites de référence / Inspirations" class="nb-textarea" data-i18n-placeholder="references_placeholder" placeholder="Ajoutez des liens ou des exemples..."></textarea>
                         </div>
                     </div>
                     <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
                         <div class="nb-form-group" style="flex:1 1 100%;min-width:250px;">
-                            <label for="description">Description détaillée du projet *</label>
-                            <textarea id="description" name="Description détaillée du projet" class="nb-textarea" placeholder="Décrivez votre projet..." required></textarea>
+                <label for="description" data-i18n="description_label">Description détaillée du projet *</label>
+                <textarea id="description" name="Description détaillée du projet" class="nb-textarea" data-i18n-placeholder="description_placeholder" placeholder="Décrivez votre projet..." required></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="nb-button orange" style="margin-top:1.5rem;width:100%;max-width:300px;">Envoyer</button>
+            <button type="submit" class="nb-button orange" style="margin-top:1.5rem;width:100%;max-width:300px;" data-i18n="submit_button">Envoyer</button>
                 </form>
             </div>
         </div>
@@ -363,7 +363,7 @@
                     <span>06 15 15 27 80</span>
                 </div>
             </div>
-            <p>&copy; 2025 Alexis Ventre - Tous droits réservés</p>
+            <p data-i18n="footer_copy">&copy; 2025 Alexis Ventre - Tous droits réservés</p>
         </div>
     </footer>
 
