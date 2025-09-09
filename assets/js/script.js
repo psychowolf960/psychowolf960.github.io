@@ -288,7 +288,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Brutalist typing effect for hero title
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
         const originalText = heroTitle.textContent;
@@ -333,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Random rotation for cards on load
     const rotateCards = () => {
         cards.forEach((card, index) => {
-            const randomRotation = (Math.random() - 0.5) * 4; // -2 to 2 degrees
+            const randomRotation = (Math.random() - 0.5) * 4;
             card.style.transform = `rotate(${randomRotation}deg)`;
         });
     };
