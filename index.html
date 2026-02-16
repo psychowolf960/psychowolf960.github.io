@@ -5,23 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexis Ventre - Portfolio</title>
-    <meta name="description" content="Portfolio d'Alexis Ventre, étudiant en BUT GEI - Développeur Web & Game Developer">
+    <meta name="description" content="Portfolio d'Alexis Ventre - Developpeur Web & Game Developer">
     <meta name="author" content="Alexis Ventre">
     <meta name="keywords" content="portfolio, web developer, game developer, GEI, HTML, CSS, JavaScript, Godot">
-    
-    <!-- NeoBrutalism CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/neobrutalismcss@latest" />
-    
-    <!-- Google Fonts for NeoBrutalism -->
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Alexis Ventre - Portfolio">
+    <meta property="og:description" content="Developpeur Web & Game Developer - Sites modernes, rapides et sur-mesure">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&family=Lexend+Mega:wght@700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- NeoBrutalism CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/neobrutalismcss@latest" />
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Rough Notation (hand-drawn doodle annotations) -->
+    <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
 </head>
 
 <body>
@@ -40,23 +48,18 @@
                 </a>
             </li>
             <li class="side-nav-item" role="none">
-                <a href="#about" class="side-nav-link" role="menuitem" data-i18n-title="nav_about" title="À propos">
+                <a href="#about" class="side-nav-link" role="menuitem" data-i18n-title="nav_about" title="A propos">
                     <i class="ph ph-user"></i>
+                </a>
+            </li>
+            <li class="side-nav-item" role="none">
+                <a href="#games" class="side-nav-link" role="menuitem" data-i18n-title="nav_games" title="Jeux Video">
+                    <i class="ph ph-game-controller"></i>
                 </a>
             </li>
             <li class="side-nav-item" role="none">
                 <a href="#projects" class="side-nav-link" role="menuitem" data-i18n-title="nav_projects" title="Projets Web">
                     <i class="ph ph-code"></i>
-                </a>
-            </li>
-            <li class="side-nav-item" role="none">
-                <a href="#games" class="side-nav-link" role="menuitem" data-i18n-title="nav_games" title="Jeux Vidéo">
-                    <i class="ph ph-game-controller"></i>
-                </a>
-            </li>
-            <li class="side-nav-item" role="none">
-                <a href="#contact" class="side-nav-link" role="menuitem" data-i18n-title="nav_contact" title="Contact">
-                    <i class="ph ph-envelope"></i>
                 </a>
             </li>
         </ul>
@@ -82,69 +85,76 @@
                         <div class="badge-inner">
                             <span class="badge-text">Gamedesign</span>
                         </div>
-
                     </div>
                 </div>
-                
+
                 <!-- CTA Section -->
                 <div class="cta-section">
                     <h3 class="cta-title" data-i18n="cta_title">Besoin d'un site web ?</h3>
-                    <p class="cta-text" data-i18n-html="cta_text">Je crée des sites <span class="surligne-orange">modernes, rapides et sur-mesure</span> pour développer votre activité.</p>
-                    <button class="nb-button orange cta-button">
-                        <i class="ph ph-rocket-launch"></i>
-                        <span data-i18n="cta_button">Créons votre site !</span>
-                    </button>
+                    <p class="cta-text" data-i18n-html="cta_text">Je cree des sites <span class="surligne-orange">modernes, rapides et sur-mesure</span> pour developper votre activite.</p>
                 </div>
             </div>
-
         </div>
     </header>
 
+    <!-- Wave separator: Hero → About -->
+    <div class="section-separator separator-hero-about">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C150,100 350,0 500,80 C650,160 750,20 900,60 C1050,100 1150,30 1200,50 L1200,120 L0,120 Z" />
+        </svg>
+    </div>
+
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section textured-bg">
         <div class="section-container">
-            <h2 class="section-title" data-i18n="about_title">À PROPOS</h2>
+            <h2 class="section-title" data-i18n="about_title">A PROPOS</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p data-i18n-html="about_p1">Je <span class="surligne-orange">développe</span> mes compétences pratiques par la création de sites/blogs wordpress et l'expérimentation de logiciels et moteurs de jeu.<br><br></p>
-                    <p data-i18n-html="about_p2">Mis à part ça j'aime bien les <span class="surligne-orange">échecs</span> (le jeu), les <span class="surligne-orange">cookies</span> (les biscuits) et les <span class="surligne-orange">Binturong</span> (l'animal)<br> </p>
+                    <p data-i18n-html="about_p1">Je <span class="surligne-orange">developpe</span> mes competences pratiques par la creation de sites/blogs wordpress et l'experimentation de logiciels et moteurs de jeu.<br><br></p>
+                    <p data-i18n-html="about_p2">Mis a part ca j'aime bien les <span class="surligne-orange">echecs</span> (le jeu), les <span class="surligne-orange">cookies</span> (les biscuits) et les <span class="surligne-orange">Binturong</span> (l'animal)<br> </p>
                     <p data-i18n-html="about_p3"><i><span class="surligne-orange">Passionnant...</span></i></p>
                 </div>
                 <div class="skills-grid">
-                    <div class="nb-card skill-card">
+                    <div class="nb-card skill-card" data-skill-level="90">
                         <div class="nb-card-content">
                             <i class="ph ph-file-html skill-icon"></i>
                             <h3 class="nb-card-title">HTML</h3>
+                            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
                         </div>
                     </div>
-                    <div class="nb-card skill-card">
+                    <div class="nb-card skill-card" data-skill-level="85">
                         <div class="nb-card-content">
                             <i class="ph ph-paint-brush skill-icon"></i>
                             <h3 class="nb-card-title">CSS</h3>
+                            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
                         </div>
                     </div>
-                    <div class="nb-card skill-card">
+                    <div class="nb-card skill-card" data-skill-level="70">
                         <div class="nb-card-content">
                             <i class="ph ph-file-js skill-icon"></i>
                             <h3 class="nb-card-title">JavaScript</h3>
+                            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
                         </div>
                     </div>
-                    <div class="nb-card skill-card">
+                    <div class="nb-card skill-card" data-skill-level="55">
                         <div class="nb-card-content">
                             <i class="ph ph-file-py skill-icon"></i>
                             <h3 class="nb-card-title">Python</h3>
+                            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
                         </div>
                     </div>
-                    <div class="nb-card skill-card">
+                    <div class="nb-card skill-card" data-skill-level="45">
                         <div class="nb-card-content">
                             <i class="ph ph-moon skill-icon"></i>
                             <h3 class="nb-card-title">Lua</h3>
+                            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
                         </div>
                     </div>
-                    <div class="nb-card skill-card">
+                    <div class="nb-card skill-card" data-skill-level="75">
                         <div class="nb-card-content">
                             <i class="ph ph-game-controller skill-icon"></i>
                             <h3 class="nb-card-title">Gdscript</h3>
+                            <div class="skill-bar"><div class="skill-bar-fill"></div></div>
                         </div>
                     </div>
                 </div>
@@ -152,14 +162,133 @@
         </div>
     </section>
 
+    <!-- Zigzag separator: About → Games -->
+    <div class="section-separator separator-about-games">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 L60,60 L120,0 L180,60 L240,0 L300,60 L360,0 L420,60 L480,0 L540,60 L600,0 L660,60 L720,0 L780,60 L840,0 L900,60 L960,0 L1020,60 L1080,0 L1140,60 L1200,0 L1200,120 L0,120 Z" />
+        </svg>
+    </div>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section textured-bg">
+        <div class="section-container">
+            <h2 class="section-title" data-i18n="games_title">JEUX VIDEO</h2>
+            <div class="games-grid">
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/gus.png" alt="GusCurse" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">GusCurse Baudot Jam</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/Better.gif" alt="Better" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">Better</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/FPills.gif" alt="FPills" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">FPills</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/Knight.png" alt="Knight" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">Knight</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/Oneway.png" alt="Oneway" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">Oneway</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/PAINTer.png" alt="PAINTer" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">PAINTer</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/Puff.gif" alt="Puff" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">Puff</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/Unispin.png" alt="Unispin" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">Unispin</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/Yarhg.png" alt="YARGH" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">YARGH</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card">
+                        <img src="assets/images/games/DawnFire.png" alt="DawnFire" class="nb-card-img" loading="lazy">
+                        <div class="nb-card-content">
+                            <h3 class="nb-card-title">DawnFire</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card game-card-placeholder">
+                        <div class="nb-card-content">
+                            <i class="ph ph-spider skill-icon"></i>
+                            <h3 class="nb-card-title">Ar&eacute;gner</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://psychowolf960.itch.io" target="_blank" rel="noopener">
+                    <div class="nb-card game-card game-card-placeholder">
+                        <div class="nb-card-content">
+                            <i class="ph ph-bird skill-icon"></i>
+                            <h3 class="nb-card-title">Floppy Oiseau</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave separator: Games → Projects -->
+    <div class="section-separator separator-games-projects">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C200,120 400,0 600,60 C800,120 1000,0 1200,80 L1200,120 L0,120 Z" />
+        </svg>
+    </div>
+
     <!-- Web Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section textured-bg">
         <div class="section-container">
             <h2 class="section-title" data-i18n="projects_title">PROJETS WEB</h2>
             <div class="projects-grid">
                 <div class="nb-card project-card">
                     <a href="https://fishy-river.netlify.app/" target="_blank" rel="noopener">
-                        <img src="assets/images/projects/papernet.jpeg" alt="PaperNet" class="nb-card-img">
+                        <img src="assets/images/projects/papernet.jpeg" alt="PaperNet" class="nb-card-img" loading="lazy">
                     </a>
                     <div class="nb-card-content">
                         <h3 class="nb-card-title">PaperNet</h3>
@@ -170,7 +299,7 @@
                 </div>
                 <div class="nb-card project-card">
                     <a href="http://arkensoi.com/" target="_blank" rel="noopener">
-                        <img src="assets/images/projects/arkensoi.png" alt="Arkensoi" class="nb-card-img">
+                        <img src="assets/images/projects/arkensoi.png" alt="Arkensoi" class="nb-card-img" loading="lazy">
                     </a>
                     <div class="nb-card-content">
                         <h3 class="nb-card-title">Arkensoi</h3>
@@ -179,10 +308,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="nb-card project-card">
                     <a href="https://artal-souvenirs.fr/accueil" target="_blank" rel="noopener">
-                        <img src="assets/images/projects/artal.png" alt="Artal Souvenirs" class="nb-card-img">
+                        <img src="assets/images/projects/artal.png" alt="Artal Souvenirs" class="nb-card-img" loading="lazy">
                     </a>
                     <div class="nb-card-content">
                         <h3 class="nb-card-title">Artal Souvenirs</h3>
@@ -191,13 +319,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="nb-card project-card">
                     <a href="https://cote-photo.netlify.app/" target="_blank" rel="noopener">
-                        <img src="assets/images/projects/cote_photo.png" alt="Côte Photo" class="nb-card-img">
+                        <img src="assets/images/projects/cote_photo.png" alt="Cote Photo" class="nb-card-img" loading="lazy">
                     </a>
                     <div class="nb-card-content">
-                        <h3 class="nb-card-title">Côte Photo</h3>
+                        <h3 class="nb-card-title">Cote Photo</h3>
                         <div class="nb-card-actions">
                             <a href="https://cote-photo.netlify.app/" target="_blank" rel="noopener" class="nb-button green">Voir le projet</a>
                         </div>
@@ -207,168 +334,17 @@
         </div>
     </section>
 
-    <!-- Games Section -->
-    <section id="games" class="games-section">
-        <div class="section-container">
-            <h2 class="section-title" data-i18n="games_title">JEUX VIDÉO</h2>
-<div class="games-grid">
-    <a href="https://psychowolf960.itch.io" target="_blank">
-        <div class="nb-card game-card">
-            <img src="assets/images/games/gus.png" alt="GusCurse" class="nb-card-img">
-            <div class="nb-card-content">
-                <h3 class="nb-card-title">GusCurse Baudot Jam</h3>
-            </div>
-        </div>
-    </a>
-    <a href="https://psychowolf960.itch.io" target="_blank">
-        <div class="nb-card game-card">
-            <img src="assets/images/games/Better.gif" alt="Better" class="nb-card-img">
-            <div class="nb-card-content">
-                <h3 class="nb-card-title">Better</h3>
-            </div>
-        </div>
-    </a>
-
-
-    <a href="https://psychowolf960.itch.io" target="_blank">
-        <div class="nb-card game-card">
-            <img src="assets/images/games/FPills.gif" alt="FPills" class="nb-card-img">
-            <div class="nb-card-content">
-                <h3 class="nb-card-title">FPills</h3>
-            </div>
-        </div>
-    </a>
-
-    <a href="https://psychowolf960.itch.io" target="_blank">
-        <div class="nb-card game-card">
-            <img src="assets/images/games/Knight.png" alt="Knight" class="nb-card-img">
-            <div class="nb-card-content">
-                <h3 class="nb-card-title">Knight</h3>
-            </div>
-        </div>
-    </a>
-
-    <a href="https://psychowolf960.itch.io" target="_blank">
-        <div class="nb-card game-card">
-            <img src="assets/images/games/Oneway.png" alt="Oneway" class="nb-card-img">
-            <div class="nb-card-content">
-                <h3 class="nb-card-title">Oneway</h3>
-            </div>
-        </div>
-    </a>
-
-    <a href="https://psychowolf960.itch.io" target="_blank">
-        <div class="nb-card game-card">
-            <img src="assets/images/games/PAINTer.png" alt="PAINTer" class="nb-card-img">
-            <div class="nb-card-content">
-                <h3 class="nb-card-title">PAINTer</h3>
-            </div>
-        </div>
-    </a>
-
-    <a href="https://psychowolf960.itch.io" target="_blank">
-        <div class="nb-card game-card">
-            <img src="assets/images/games/Puff.gif" alt="Puff" class="nb-card-img">
-            <div class="nb-card-content">
-                <h3 class="nb-card-title">Puff</h3>
-            </div>
-        </div>
-    </a>
-
-    <a href="https://psychowolf960.itch.io" target="_blank">
-        <div class="nb-card game-card">
-            <img src="assets/images/games/Unispin.png" alt="Unispin" class="nb-card-img">
-            <div class="nb-card-content">
-                <h3 class="nb-card-title">Unispin</h3>
-            </div>
-        </div>
-    </a>
-</div>
-</section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="section-container">
-            <h2 class="section-title" data-i18n="contact_title">CONTACT</h2>
-            <div class="contact-content" style="width:100%;display:flex;justify-content:center;align-items:center;">
-                <form class="contact-form" style="width:100%;max-width:700px;margin:auto;" action="https://formspree.io/f/xqalyknq" method="POST">
-                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
-                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="name" data-i18n="name_label">Nom & Prénom *</label>
-                            <input type="text" id="name" name="Nom et Prénom" class="nb-input default" required>
-                        </div>
-                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="email" data-i18n="email_label">Email *</label>
-                            <input type="email" id="email" name="Email" class="nb-input default" required>
-                        </div>
-                    </div>
-                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
-                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="phone" data-i18n="phone_label">Téléphone</label>
-                            <input type="tel" id="phone" name="Téléphone" class="nb-input default">
-                        </div>
-                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="company" data-i18n="company_label">Entreprise / Organisation</label>
-                            <input type="text" id="company" name="Entreprise / Organisation" class="nb-input default">
-                        </div>
-                    </div>
-                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
-                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="project-type" data-i18n="project_type_label">Type de projet *</label>
-                            <select id="project-type" name="Type de projet" class="nb-input default" required>
-                                <option value="" data-i18n="select_placeholder">Sélectionnez</option>
-                                <option data-i18n="option_site_vitrine">Site vitrine</option>
-                                <option data-i18n="option_ecommerce">Site e-commerce</option>
-                                <option data-i18n="option_web_app">Webapp</option>
-                                <option data-i18n="option_game">Jeu vidéo</option>
-                                <option data-i18n="option_refonte">Refonte de site</option>
-                                <option data-i18n="option_other">Autre</option>
-                            </select>
-                        </div>
-                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="budget" data-i18n="budget_label">Budget approximatif</label>
-                            <select id="budget" name="Budget approximatif" class="nb-input default">
-                                <option value="" data-i18n="select_placeholder">Sélectionnez</option>
-                                <option data-i18n="budget_opt1">100€ - 200€</option>
-                                <option data-i18n="budget_opt2">200€ - 400€</option>
-                                <option data-i18n="budget_opt3">400€ - 500€</option>
-                                <option data-i18n="budget_opt4">500€+</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
-                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="delay" data-i18n="delay_label">Délai souhaité</label>
-                            <select id="delay" name="Délai souhaité" class="nb-input default">
-                                <option value="" data-i18n="select_placeholder">Sélectionnez</option>
-                                <option data-i18n="delay_opt1">Urgent (moins d’une semaine)</option>
-                                <option data-i18n="delay_opt2">1-2 semaines</option>
-                                <option data-i18n="delay_opt3">2-3 semaines</option>
-                                <option data-i18n="delay_opt4">3-6 semaines</option>
-                                <option data-i18n="delay_opt5">Flexible</option>
-                            </select>
-                        </div>
-                        <div class="nb-form-group" style="flex:1 1 45%;min-width:250px;">
-                            <label for="references" data-i18n="references_label">Sites de référence / Inspirations</label>
-                            <textarea id="references" name="Sites de référence / Inspirations" class="nb-textarea" data-i18n-placeholder="references_placeholder" placeholder="Ajoutez des liens ou des exemples..."></textarea>
-                        </div>
-                    </div>
-                    <div class="form-row" style="display:flex;gap:2rem;flex-wrap:wrap;">
-                        <div class="nb-form-group" style="flex:1 1 100%;min-width:250px;">
-                <label for="description" data-i18n="description_label">Description détaillée du projet *</label>
-                <textarea id="description" name="Description détaillée du projet" class="nb-textarea" data-i18n-placeholder="description_placeholder" placeholder="Décrivez votre projet..." required></textarea>
-                        </div>
-                    </div>
-            <button type="submit" class="nb-button orange" style="margin-top:1.5rem;width:100%;max-width:300px;" data-i18n="submit_button">Envoyer</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <!-- Zigzag separator: Projects → Footer -->
+    <div class="section-separator separator-projects-footer">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 L60,60 L120,0 L180,60 L240,0 L300,60 L360,0 L420,60 L480,0 L540,60 L600,0 L660,60 L720,0 L780,60 L840,0 L900,60 L960,0 L1020,60 L1080,0 L1140,60 L1200,0 L1200,120 L0,120 Z" />
+        </svg>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="section-container">
-            <div class="footer-contact-info" style="display:flex;gap:2rem;align-items:center;justify-content:center;margin-bottom:0.5rem;">
+            <div class="footer-contact-info">
                 <div class="contact-item">
                     <i class="ph ph-envelope" aria-hidden="true"></i>
                     <span>alexisventre974@gmail.com</span>
@@ -378,30 +354,11 @@
                     <span>06 15 15 27 80</span>
                 </div>
             </div>
-            <p data-i18n="footer_copy">&copy; 2025 Alexis Ventre - Tous droits réservés</p>
+            <p class="footer-copy"></p>
         </div>
     </footer>
 
     <script src="assets/js/script.js"></script>
-    <script>
-    // Burger menu functionality
-    const burger = document.getElementById('burger-menu');
-    const navLinks = document.getElementById('side-nav-links');
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
-    burger.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            navLinks.classList.toggle('open');
-        }
-    });
-    // Close menu on link click (mobile)
-    document.querySelectorAll('.side-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) navLinks.classList.remove('open');
-        });
-    });
-    </script>
 </body>
 
 </html>
