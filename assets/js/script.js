@@ -258,6 +258,147 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // --- Game Detail Modal ---
+    const gameData = {
+        guscurse: {
+            title: 'GusCurse',
+            genre: 'Aventure / Puzzle',
+            desc: "Jeu d'aventure et de puzzle m\u00EAlant 3D et 2D, cr\u00E9\u00E9 pour la Baudot Autumn Game Jam. Premier prix du jury.",
+            link: 'https://psychowolf960.itch.io/guscurse',
+            video: 'https://www.youtube.com/watch?v=OyrPyMJgYgE'
+        },
+        better: {
+            title: 'Better',
+            genre: 'Platformer / Speedrun',
+            desc: "Jeu de platforming 2D de pr\u00E9cision et speedrunning multijoueur minimaliste avec \u00E9diteur de niveaux, partage communautaire et classements.",
+            link: 'https://psychowolf960.itch.io/bebetter'
+        },
+        fpills: {
+            title: 'FPills',
+            genre: 'FPS / Aventure',
+            desc: "Jeu de tir \u00E0 la premi\u00E8re personne o\u00F9 le joueur doit balancer une jauge d'addiction en r\u00E9cup\u00E9rant des drops sur ses ennemis.",
+            link: 'https://psychowolf960.itch.io'
+        },
+        knight: {
+            title: 'The Legendary Knight',
+            genre: 'Platformer / Narratif',
+            desc: "Platformer narratif r\u00E9alis\u00E9 en 7 jours pour la cat\u00E9gorie #beginner de la Pixel Game Jam 2024.",
+            link: 'https://psychowolf960.itch.io/the-legendary-knight'
+        },
+        oneway: {
+            title: 'Oneway',
+            genre: 'Runner 2D',
+            desc: "Runner 2D inspir\u00E9 de Chrome Dino o\u00F9 le Petit Chaperon Rouge r\u00E9colte des pi\u00E8ces pour survivre dans un monde capitaliste injuste. Deuxi\u00E8me prix laur\u00E9at Acad\u00E9mie de Reims \u2014 Troph\u00E9es NSI.",
+            link: 'https://psychowolf960.itch.io/oneway'
+        },
+        painter: {
+            title: 'PAINTer',
+            genre: 'Simulation / Art',
+            desc: "Simulateur d'artiste ind\u00E9pendant inspir\u00E9 de Passpartout. Acceptez des commandes en ligne, g\u00E9rez votre r\u00E9putation, achetez des outils et payez vos imp\u00F4ts pour survivre. Prototype en cours de d\u00E9veloppement.",
+            link: 'https://psychowolf960.itch.io/painter-hungry-artists'
+        },
+        puff: {
+            title: 'Puff',
+            genre: 'Simulateur 2D',
+            desc: "Simulateur 2D o\u00F9 le but est d'aller le plus loin possible avec un ballon sans se d\u00E9gonfler, puis d'acheter des am\u00E9liorations entre chaque mort.",
+            link: 'https://psychowolf960.itch.io/puff'
+        },
+        unispin: {
+            title: 'Unispin',
+            genre: 'Simulation',
+            desc: "Simulateur de syst\u00E8mes solaires. Cr\u00E9ez et observez vos propres configurations plan\u00E9taires.",
+            link: 'https://psychowolf960.itch.io/unispin'
+        },
+        yargh: {
+            title: 'YARGH',
+            genre: 'Horreur / \u00C9nigme',
+            desc: "Jeu d'horreur et d'\u00E9nigmes r\u00E9alis\u00E9 pour la Game Jam The Witching Hour.",
+            link: 'https://psychowolf960.itch.io/yargh'
+        },
+        dawnfire: {
+            title: 'DawnFire',
+            genre: 'Horreur / Narratif',
+            desc: "Mini jeu d'horreur narratif r\u00E9alis\u00E9 pour la Wild Jam 70.",
+            link: 'https://lauiss.itch.io/dawnfire'
+        },
+        aregner: {
+            title: 'Ar\u00E9gner',
+            genre: 'Humour / Strat\u00E9gie',
+            desc: "Une troupe d'araign\u00E9es tente de faire peur aux habitants pour s'accaparer leurs logements en poss\u00E9dant les objets du logis. R\u00E9alis\u00E9 pour la Spooky Jam 2.",
+            link: 'https://razael170.itch.io/argner'
+        },
+        ballgame: {
+            title: 'A Ball Game',
+            genre: 'Humour / Simulateur',
+            desc: "Court jeu d'humour absurde inspir\u00E9 de Katamari Damacy o\u00F9 le but est d'absorber la Terre en tant qu'ast\u00E9ro\u00EFde.",
+            link: 'https://psychowolf960.itch.io/a-ball-game'
+        },
+        mouse: {
+            title: 'Mouse',
+            genre: 'Survie / Exp\u00E9rimental',
+            desc: "Mini jeu exp\u00E9rimental de survie : une petite souris orange court apr\u00E8s une tranche d'emmental dans un paysage bleu bizarre tout en \u00E9vitant des ast\u00E9ro\u00EFdes mortels.",
+            link: 'https://psychowolf960.itch.io/small-orange-mouse-in-weird-blue-landscape-run-after-a-slice-of-emmental-while-b'
+        },
+        towhere: {
+            title: 'ToWhere\u00A0?',
+            genre: 'Construction / Pixel Art',
+            desc: "Jeu vertical en pixel art centr\u00E9 sur la construction. \u00C9rigez une tour toujours plus haute en pla\u00E7ant et retirant des blocs en temps r\u00E9el selon des r\u00E8gles physiques pr\u00E9cises. Projet en cours de d\u00E9veloppement.",
+            link: 'https://lynnboass.itch.io/towhere'
+        }
+    };
+
+    const modal = document.getElementById('gameModal');
+    const modalImg = document.getElementById('gameModalImg');
+    const modalTitle = document.getElementById('gameModalTitle');
+    const modalGenre = document.getElementById('gameModalGenre');
+    const modalDesc = document.getElementById('gameModalDesc');
+    const modalLink = document.getElementById('gameModalLink');
+    const modalVideo = document.getElementById('gameModalVideo');
+
+    function openGameModal(gameKey, cardEl) {
+        const data = gameData[gameKey];
+        if (!data) return;
+
+        const cardImg = cardEl.querySelector('.nb-card-img');
+        modalImg.src = cardImg ? cardImg.src : '';
+        modalImg.alt = data.title;
+        modalTitle.textContent = data.title;
+        modalGenre.textContent = data.genre;
+        modalDesc.textContent = data.desc;
+        modalLink.href = data.link;
+
+        if (data.video) {
+            modalVideo.href = data.video;
+            modalVideo.style.display = 'inline-flex';
+        } else {
+            modalVideo.style.display = 'none';
+        }
+
+        modal.classList.add('active');
+    }
+
+    function closeGameModal() {
+        modal.classList.remove('active');
+    }
+
+    document.querySelectorAll('.game-card[data-game]').forEach(card => {
+        card.addEventListener('click', function() {
+            openGameModal(this.dataset.game, this);
+        });
+    });
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal || e.target.classList.contains('game-modal-close')) {
+            closeGameModal();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeGameModal();
+        }
+    });
+
     // --- Skill bar animation on scroll ---
     const skillCards = document.querySelectorAll('.skill-card[data-skill-level]');
     const skillObserver = new IntersectionObserver((entries) => {
